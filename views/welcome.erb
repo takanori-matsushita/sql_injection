@@ -1,0 +1,24 @@
+<h1>ようこそ<%= @user[0]['name'] %>さん</h1>
+<table>
+  <thead>
+    <th>ユーザーID</th>
+    <th>パスワード</th>
+    <th>名前</th>
+    <th>生年月日</th>
+    <th>住所</th>
+    <th>電話番号</th>
+    <th>メールアドレス</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @user[0]['userid'] %></td>
+      <td><%= @user[0]['password'] %></td>
+      <td><%= @user[0]['name'] %></td>
+      <td><%= @user[0]['birthday'] %></td>
+      <td><%= @user[0]['address'] %></td>
+      <td><%= @user[0]['tel'] %></td>
+      <td><%= @user[0]['email'] %></td>
+    </tr>
+  </tbody>
+</table>
+<a href="/">投稿一覧</a>

@@ -1,0 +1,26 @@
+<p>ログイン中のユーザー：<%= @user[0]['userid'] %></p>
+<a href="/logout">ログアウト</a>
+<a href="/welcome">マイページ</a>
+<form action="search">
+  <p>検索</p>
+  <input type="text" name="search">
+  <input type="submit" value="検索">
+</form>
+<hr>
+<table style="padding: 20px 0;">
+  <thead>
+    <th width="200">タイトル</th>
+    <th>内容</th>
+    <th>日付</th>
+  </thead>
+  <tbody>
+    <% @searchs.each do |post| %>
+    <tr>
+      <td><%= post['title'] %></td>
+      <td><%= post['content'] %></td>
+      <td><%= post['date'] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<a href="/">投稿一覧</a>
