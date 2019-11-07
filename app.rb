@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'pg'
-require 'pry'
 
 enable :sessions
 
@@ -17,7 +16,7 @@ def client
   :host => "",
   :user => '',
   :password => '',
-  :dbname => "sql_injection")
+  :dbname => "")
 end
 
 get '/' do
