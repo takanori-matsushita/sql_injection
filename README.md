@@ -25,7 +25,7 @@ app.rbの検索フォームSQL文(72行目)
 `select title, content, date from posts where title like '%' union select userid, password, current_date from users; --%' or content like '%#{params[:search]}%'`
 
 ## SQLインジェクション対策
-検索フォームのSQL文(72行目)を以下のように修正して下さい。
+検索フォームのSQL文(72行目)を以下のように修正して下さい。  
 `@searchs = client.exec_params("select title, content, date from posts where title like $1 or content like $1",["%#{params[:search]}%"])`
 
 ## gem
