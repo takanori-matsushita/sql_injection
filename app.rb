@@ -5,8 +5,7 @@ require 'pg'
 enable :sessions
 
 before '/*' do
-  if request.path == "/login"
-  else
+  if request.path != "/login"
     redirect '/login' if session[:id].nil?
   end
 end
