@@ -35,20 +35,3 @@ insert into posts(title,content,date) values
 ('アメリカ','久々に帰りたいな','2019-5-8'),
 ('activerecord','バリデーション設定や紐付けがかんたんにできて便利！','2019-8-24'),
 ('bcrypt','パスワードを暗号化して保存するgem','2019-10-10');
-
--- ここまでのSQL文を実行。以下は検索フォームに入力する
-
-app.rbのSQL文
-select title, content, date from posts where title like '%#{params[:search]}%' or content like '%#{params[:search]}%'
-
---テーブルのデータをすべて削除する
-'; truncate table posts; --
-
---以下のようにSQL文として解釈されてしまう
-select title, content, date from posts where title like '%'; truncate table posts; --%' or content like '%#{params[:search]}%'
-
---ユーザーIDとパスワードを表示する
-' union select userid, password, current_date from users; --
-
---以下のようにSQL文として解釈されてしまう
-select title, content, date from posts where title like '%' union select userid, password, current_date from users; --%' or content like '%#{params[:search]}%'
