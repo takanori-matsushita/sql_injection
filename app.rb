@@ -59,8 +59,10 @@ get '/welcome' do
 end
 
 post '/create' do
+  title = params[:title]
+  content = params[:content]
   date = Date.today
-  client.exec_params("insert into posts(title, content, date) values('#{params[:title]}', '#{params[:content]}', '#{date}')")
+  client.exec_params("insert into posts(title, content, date) values($1, $2, $3)",[title, content, date])
   redirect "/"
 end
 
