@@ -4,6 +4,8 @@
 
 ２．データベース接続の設定を適宜編集して下さい。(デフォルトではpostgreSQLを使用)
 
-#gem
+gem
+
 sinatra
+
 pg
