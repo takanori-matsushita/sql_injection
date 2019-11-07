@@ -5,7 +5,7 @@
 ２．データベース接続の設定を適宜編集して下さい。(デフォルトではpostgreSQLを使用)
 
 ## SQLインジェクションの内容
-app.rbの検索フォームSQL文
+app.rbの検索フォームSQL文  
 `select title, content, date from posts where title like '%#{params[:search]}%' or content like '%#{params[:search]}%`
 
 ### テーブルのデータをすべて削除する
