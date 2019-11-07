@@ -3,8 +3,8 @@
 1. sql-injection.sqlファイルのsqlを実行してデータベース環境を構築して下さい。
 1. データベース接続の設定を適宜編集して下さい。(デフォルトではpostgreSQLを使用)
 1. 以下のID・パスワードでログインして下さい。
-ユーザーID：hacker
-パスワード：hacker
+- ユーザーID：hacker  
+- パスワード：hacker  
 
 ## SQLインジェクションの内容
 app.rbの検索フォームSQL文(72行目)  
