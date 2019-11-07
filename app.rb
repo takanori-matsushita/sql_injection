@@ -14,9 +14,10 @@ end
 def client
   PG::connect(
   :host => "",
-  :user => 'matsushitatakanori',
-  :password => '6fpwr1a3',
-  :dbname => "sql_injection")
+  :user => '',
+  :password => '',
+  :dbname => ""
+  )
 end
 
 get '/' do
